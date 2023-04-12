@@ -1,4 +1,7 @@
 # rota-administrator-app
+To get Started,
+- Create a .env file,
+- Add a VUE_APP_KEY in it. This is the key query in the api call
 
 ## Project setup
 ```
