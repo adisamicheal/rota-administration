@@ -87,7 +87,6 @@ export default new Vuex.Store({
             { root: true }
           );
         }
-        console.log(res);
         
       } catch (error: any) {
         commit('setErrorState', true)
@@ -102,7 +101,6 @@ export default new Vuex.Store({
           },
           { root: true }
         );
-        console.log(error);
         
         return error
       }
@@ -114,10 +112,8 @@ export default new Vuex.Store({
         if(res.status === 200) {
           commit('setUsers', res.data)
         }
-        console.log(res);
         
       } catch (error: any) {
-        console.log('user error', error);
         commit('setUserError', error?.response.data.error)
         return error
 
@@ -141,7 +137,6 @@ export default new Vuex.Store({
             { root: true }
           );
         }
-        console.log(res);
         
       } catch (error: any) {
         commit('setErrorState', true)
@@ -156,7 +151,6 @@ export default new Vuex.Store({
           },
           { root: true }
         );
-        console.log(error);
 
         return error
       }

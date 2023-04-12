@@ -76,7 +76,6 @@ export default Vue.extend({
     currentUser() {
       if (this.singleRota) {
         const user = this.users.find((val: any) => val.id === Number(this.singleRota.id))
-        console.log('our single user', user, this.singleRota);
         const firstName = user.first_name
         const lastName = user.last_name
         const fullName = `${firstName} ${lastName}`
