@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <v-container fluid >
+    <div class="rota-layout">
+      <user-list></user-list>
+      <Shedule />
+    </div>
+  </v-container>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+  import Vue from 'vue'
+  import UserList from '@/components/UserList.vue'
+  import Shedule from '@/components/SheduleList.vue'
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class HomeView extends Vue {}
+  export default Vue.extend({
+    name: 'HomeView',
+
+    components: {
+      UserList,
+      Shedule
+    },
+  })
 </script>
+
+<style lang="scss" scoped>
+.rota-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 10px 50px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+</style>
